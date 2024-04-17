@@ -1,4 +1,3 @@
-from django.contrib.messages import constants as messages
 import os
 from pathlib import Path
 
@@ -21,7 +20,7 @@ CSRF_TRUSTED_ORIGINS = ['https://'+os.environ['WEBSITE_HOSTNAME']]
 DEBUG = True
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 STATIC_DIR = os.path.join(BASE_DIR, 'static')
 
